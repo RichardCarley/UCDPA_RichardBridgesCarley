@@ -19,7 +19,7 @@ print(data_col.shape)
 
 df = data[(data["Year"] >= "2000") & (data["Year"] <= "2016")]
 print(df.head())
-print(df.loc[1:20, "Name":"Publisher"])
+
 df.isnull().sum()
 print(df[df["Publisher"].isnull()])
 df.isnull()
@@ -43,8 +43,8 @@ ax.bar(top_game["Name"], top_game["Global_Sales"], color="r")
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel("Global Sales (Millions)")
 ax.set_xlabel("Games")
-ax.set_title('Top Selling Games 2000 - 2014')
-plt.xticks(rotation=45)
+ax.set_title('Top Selling Games 2000 - 2016')
+plt.xticks(rotation=15)
 plt.show()
 
 print(top_game.head())
@@ -88,6 +88,7 @@ best_yr = print(df_yr.loc["2008.0"])
 df_yr_sales = {2000: 201.56, 2001: 331.47, 2002: 395.52, 2003: 357.52, 2004: 419.31, 2005: 459.94, 2006: 521.04,
                2007: 611.13, 2008: 678.90, 2009: 667.30, 2010: 600, 2011: 515.99, 2012: 363.54, 2013: 368.11,
                2014: 337.05}
+
 keys = list(df_yr_sales.keys())
 values = list(df_yr_sales.values())
 plt.xlabel("Year")
