@@ -17,7 +17,7 @@ print(data_row.shape)
 data_col = data.dropna(axis=1)
 print(data_col.shape)
 
-df = data[(data["Year"] >= "2000") & (data["Year"] <= "2015")]
+df = data[(data["Year"] >= "2000") & (data["Year"] <= "2016")]
 print(df.head())
 print(df.loc[1:20, "Name":"Publisher"])
 df.isnull().sum()
@@ -43,7 +43,7 @@ ax.bar(top_game["Name"], top_game["Global_Sales"], color="r")
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel("Global Sales (Millions)")
 ax.set_xlabel("Games")
-ax.set_title('Top Selling Games 2000 - 2015')
+ax.set_title('Top Selling Games 2000 - 2014')
 plt.xticks(rotation=45)
 plt.show()
 
